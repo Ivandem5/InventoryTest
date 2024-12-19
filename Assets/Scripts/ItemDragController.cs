@@ -29,11 +29,11 @@ public class ItemDragController : MonoBehaviour
         }
         isDragging = true;
 
-        // Запоминаем глубину объекта
-        objectZDepth = mainCamera.WorldToScreenPoint(transform.position).z;
+        
+        objectZDepth = mainCamera.WorldToScreenPoint(transform.position).z; // depth to object onMouseClick
 
-        // Смещение для более плавного перемещения
-        offset = transform.position - GetMouseWorldPosition();
+        
+        offset = transform.position - GetMouseWorldPosition(); //for smooth movement
         item.Pickup();
     }
 
